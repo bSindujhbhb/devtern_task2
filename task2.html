@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartwatch Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000033; /* Background color as provided */
+            color: white;
+        }
+
+        section {
+            padding: 40px;
+            display: flex;
+            justify-content: space-around; /* Align features evenly */
+            flex-wrap: wrap; /* Allow features to wrap to the next line */
+        }
+
+        .feature {
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            max-width: 300px; /* Limit width of each feature */
+            margin-right: 20px; /* Add some spacing between features */
+        }
+
+        .feature:last-child {
+            margin-right: 0; /* Remove right margin for the last feature */
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .cta {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #fff;
+            color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta:hover {
+            background-color: #e6e6e6;
+        }
+
+        #benefits {
+            width: 50%;
+            margin: 0 auto;
+            color: black;
+            text-align: center;
+            padding: 40px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 40px auto; /* Centering horizontally */
+            display: flex; /* Make container a flexbox */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+        }
+
+        #benefits h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #benefits ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: left; /* Align list items to the left */
+        }
+
+        #benefits li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block; /* Display list items as block */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Use flexbox for the navigation items */
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 0;
+            font: inherit;
+            outline: inherit;
+        }
+
+        button#get-in-touch {
+            background-color: #fff;
+            color: #007bff;
+            border-radius: 5px;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        button#get-in-touch:hover {
+            background-color: #e6e6e6;
+        }
+
+        /* Style for the hamburger menu */
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none; /* Hide navigation links by default on small screens */
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #000033;
+                width: 100%;
+            }
+
+            nav ul li {
+                margin: 20px 0;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div id="logo">Devtern</div>
+    <nav>
+        <ul>
+            <li><button>Home</button></li>
+            <li><button>About</button></li>
+            <li><button>Services</button></li>
+            <li><button>Case Studies</button></li>
+            <li><button>Products</button></li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <button id="get-in-touch">GET IN TOUCH</button>
+</header>
+
+<section id="features">
+    <div class="feature">
+        <img src="https://domf5oio6qrcr.cloudfront.net/medialibrary/9284/iStock-684469884.jpg" alt="Feature 1" height="300" width="300">
+        <h3>Activity Tracking</h3>
+        <p>Track your steps, calories burned, and more with built-in activity tracking.</p>
+    </div>
+    <div class="feature">
+        <img src="https://my.clevelandclinic.org/-/scassets/Images/org/health/articles/23429-heart-rate-monitor" alt="Feature 2" height="300" width="300">
+        <h3>Heart Rate Monitoring</h3>
+        <p>Monitor your heart rate throughout the day and during workouts.</p>
+    </div>
+    <div class="feature">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20230516/iOxQ/64639fbe42f9e729d78cf19a/-473Wx593H-4938378180-multi-MODEL4.jpg" alt="Feature 3" height="400" width="300" style="margin-top: -21px;margin-bottom: -23px;">
+        <h3>Smart Notifications</h3>
+        <p>Receive notifications for calls, texts, and app alerts directly on your wrist.</p>
+    </div>
+</section>
+
+<section id="benefits">
+    <h2>Benefits</h2>
+    <ul>
+        <li>Stay motivated and achieve your fitness goals</li>
+        <li>Monitor your health and wellness effortlessly</li>
+        <li>Stay connected without constantly checking your phone</li>
+    </ul>
+</section>
+
+<footer>
+    <h2>Ready to Experience the Future?</h2>
+    <a href="#" class="cta">Buy Now</a>
+</footer>
+
+<script>
+    // JavaScript function to toggle the visibility of the navigation menu
+    function toggleMenu() {
+        var nav = document.querySelector('nav ul');
+        nav.style.display = nav.style.display === 'none' ? 'flex' : 'none';
+    }
+</script>
+
+</body>
+</html>
